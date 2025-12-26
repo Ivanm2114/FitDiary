@@ -90,31 +90,3 @@ flowchart TB
   class D1,D2,D3 data
   class S1,S2,S3,S4,S5,S6,S7,S8 backend
 ```
-
-# Quality Model Checklist
-
-## Functionality
-- Are core flows (register/login, add meal, view diary, list recipes) usable end-to-end?
-- Do date filters load meals for the selected day?
-- Do edits/delete for meals persist and refresh correctly?
-- Are metrics displayed and sent without user input?
-
-## Usability
-- Is navigation clear (Recipes/Diary/Profile) and back behavior predictable?
-- Are forms validated with readable error messages?
-- Are important actions accessible with one tap (add meal, edit meal)?
-
-## Efficiency
-- Are recipe lists paginated and loading incrementally?
-- Do screens avoid unnecessary recomposition and heavy work on main thread?
-- Is image loading efficient (caching, resizing)?
-
-## Reliability
-- Are API errors handled gracefully with retries where appropriate?
-- Are metrics collected without crashing the app?
-- Is session state restored correctly after app restart?
-
-## Security
-- Are sensitive fields handled safely (password not logged or stored)?
-- Is network traffic limited to required endpoints?
-- Are local data and settings minimally stored (only needed fields)?
